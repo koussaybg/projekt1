@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<fx:root type="GridPane" alignment="CENTER"  prefHeight="90.0" prefWidth="530.0"
+          xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <TextField fx:id="monStartTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <TextField fx:id="monEndTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <TextField fx:id="tueStartTextField" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="tueEndTextField" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <TextField fx:id="wedStartTextField" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <TextField fx:id="wedEndTextField" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <TextField fx:id="thuStartTextField" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <TextField fx:id="thuEndTextField" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+        <TextField fx:id="friStartTextField" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+        <TextField fx:id="friEndTextField" GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+        <TextField fx:id="satStartTextField" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
+        <TextField fx:id="satEndTextField" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
+        <TextField fx:id="sunStartTextField" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
+        <TextField fx:id="sunEndTextField" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
+        <Label text="Mo" GridPane.columnIndex="1"/>
+        <Label text="Di" GridPane.columnIndex="2"/>
+        <Label text="Mi" GridPane.columnIndex="3"/>
+        <Label text="Do" GridPane.columnIndex="4"/>
+        <Label text="Fr" GridPane.columnIndex="5"/>
+        <Label text="Sa" GridPane.columnIndex="6"/>
+        <Label text="So" GridPane.columnIndex="7"/>
+        <Label prefHeight="17.0" prefWidth="35.0" text="Start" GridPane.rowIndex="1"/>
+        <Label prefHeight="17.0" prefWidth="35.0" text="Ende" GridPane.rowIndex="2"/>
+    </children>
+</fx:root>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import view.viewController.customControls.WeekdayTimeControl?>
+<?import view.viewController.customControls.PersonInputControl?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXListView?>
+<SplitPane dividerPositions="0.37" prefHeight="160.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.EmployeeSettingsViewController">
+    <items>
+    <AnchorPane minHeight="0.0" minWidth="350.0" maxWidth="350" prefHeight="160.0">
+        <children>
+            <JFXTextField promptText="Suche" labelFloat="true" fx:id="searchTextField" onKeyTyped="#onSearchBoxAction" layoutX="20.0" layoutY="25.0" prefHeight="25.0" prefWidth="240.0" />
+            <TableView fx:id="employeeTable" layoutX="20.0" layoutY="60.0" prefHeight="600.0" prefWidth="320.0">
+                <columns>
+                <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Nachname" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="Vorname" />
+                </columns>
+            </TableView>
+            <JFXButton  fx:id="addEmployeeButton" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="20.0" layoutY="670.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Neu" onAction="#onAddEmployeeButtonClicked"/>
+            <JFXButton fx:id="deleteEmployeeButton" buttonType="FLAT" style="-fx-text-fill:#d40b0b;-fx-font-size:14px;"  layoutX="200.0" layoutY="670.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="Löschen" onAction="#onDeleteEmployeeButtonClicked"/>
+        </children>
+    </AnchorPane>
+    <ScrollPane>
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1100.0">
+                <children>
+                    <JFXButton layoutX="350.0" buttonType="FLAT" style="-fx-text-fill:#d40b0b;-fx-font-size:14px;"  layoutY="500.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Abbrechen" onAction="#onCancelButtonClicked"/>
+                    <JFXButton fx:id="saveEmployeeButton" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="460.0" layoutY="500.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Speichern" onAction="#onSaveButtonClicked"/>
+                    <PersonInputControl fx:id="personInputControl" layoutX="20" layoutY="40"/>
+                <TableView fx:id="vacationPaidTable" layoutX="20.0" layoutY="840.0" prefHeight="195.0" prefWidth="250.0">
+                <columns>
+                    <TableColumn fx:id="vacationPaidStartColumn" prefWidth="125.0" resizable="false" text="Abwesend von" />
+                    <TableColumn fx:id="vacationPaidEndColumn" prefWidth="125.0" text="Abwesend bis" />
+                </columns>
+                </TableView>
+                    <Label layoutX="20.0" layoutY="820.0" text="Bezahlte Abwesenheit" />
+                    <Label layoutX="300.0" layoutY="820.0" text="Unbezahlte Abwesenheit" />
+                <TableView fx:id="vacationUnpaidTable" layoutX="300.0" layoutY="840.0" prefHeight="195.0" prefWidth="250.0">
+                <columns>
+                    <TableColumn fx:id="vacationUnpaidStartColumn" prefWidth="125.0" resizable="false" text="Abwesend von" />
+                    <TableColumn fx:id="vacationUnpaidEndColumn" prefWidth="125.0" text="Abwesend bis" />
+                </columns>
+                </TableView>
+                <JFXButton fx:id="addVacationButton" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="450.0" layoutY="1050.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Hinzufügen" onAction="#onAddVacationButtonClicked"/>
+                <JFXComboBox fx:id="vacationTypeComboBox" layoutX="340.0" layoutY="1050.0" prefWidth="100.0" />
+                <JFXDatePicker fx:id="startVacationDatePicker" layoutX="20.0" layoutY="1050.0" prefHeight="25.0" prefWidth="150.0" />
+                <JFXDatePicker fx:id="endVacationDatePicker" layoutX="180.0" layoutY="1050.0" prefWidth="150.0" />
+                <Label layoutX="20.0" layoutY="360.0" text="Arbeitszeiten" />
+                <WeekdayTimeControl fx:id="workingsHoursControl" layoutX="20.0" layoutY="380.0" > </WeekdayTimeControl>
+                <Label layoutX="300.0" layoutY="220.0" text="Rolle" />
+                <JFXComboBox fx:id="roleComboBox" layoutX="300.0" layoutY="240.0" prefWidth="175.0" />
+                <Label layoutX="20.0" layoutY="280.0" text="Benutzername" />
+                <JFXTextField fx:id="userNameTextField" layoutX="20.0" layoutY="300.0" prefHeight="25.0" prefWidth="250.0" />
+                <Label layoutX="300.0" layoutY="280.0" text="Passwort" />
+                <JFXPasswordField fx:id="passwordTextField" layoutX="300.0" layoutY="300.0" prefHeight="25.0" prefWidth="250.0" />
+                <JFXComboBox editable="true" layoutX="20.0" layoutY="650.0" prefHeight="25.0" prefWidth="350.0" />
+                <JFXListView fx:id="qualificationListView" layoutX="20.0" layoutY="560.0" prefHeight="200.0" prefWidth="530.0" />
+                <Label layoutX="20.0" layoutY="540.0" text="Qualifikationen" />
+                <JFXComboBox fx:id="qualificationComboBox" layoutX="230.0" layoutY="770.0" prefHeight="25.0" prefWidth="150.0"/>
+                <JFXButton fx:id="qualificationAddButton" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="400.0" layoutY="770.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Qualifikation hinzufügen" onAction="#onAddSkillButtonClicked"/>
+                </children>
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+    </items>
+</SplitPane>

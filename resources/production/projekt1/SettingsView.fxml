@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<TabPane fx:id="settingsTabs" prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.SettingsViewController">
+    <tabs >
+        <Tab fx:id="employeeSettingsTab" closable="false" text="Mitarbeiter">
+            <content>
+                <fx:include fx:id="employeeSettingsView" source="EmployeeSettingsViewTab.fxml"/>
+            </content>
+        </Tab>
+        <Tab fx:id="treatmentSettingsTab" text="Angebot">
+            <content>
+                <fx:include fx:id="treatmentSettingsView" source="TreatmentSettingsViewTab.fxml"/>
+            </content>
+        </Tab>
+        <Tab fx:id="roomSettingsTab" text="Räume">
+            <content>
+                <fx:include fx:id="roomSettingsView" source="RoomSettingsViewTab.fxml"/>
+            </content>
+        </Tab>
+        <Tab fx:id="officeSettingsTab" closable="false" text="Praxisdaten">
+            <content>
+                <fx:include fx:id="officeSettingsView" source="OfficeSettingsViewTab.fxml"/>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

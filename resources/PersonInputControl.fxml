@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<fx:root type="AnchorPane" prefHeight="90.0" prefWidth="530.0"
+         xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml">
+    <JFXTextField promptText="Vorname" labelFloat="true" fx:id="firstNameTextField" layoutY="20.0" prefHeight="25.0" prefWidth="250.0" />
+    <JFXTextField promptText="Nachname" fx:id="lastNameTextField"   layoutY="80.0" prefHeight="25.0" prefWidth="250.0" />
+    <JFXTextField promptText="Straße"  fx:id="streetTextField"  layoutY="140.0" prefHeight="25.0" prefWidth="200.0" />
+    <JFXTextField promptText="Hausnr."  fx:id="streetNumberTextField" layoutX="205.0" layoutY="140.0" prefHeight="25.0" prefWidth="45.0" />
+    <JFXTextField promptText="PLZ"  fx:id="postCodeTextField"  layoutY="200.0" prefHeight="25.0" prefWidth="85.0" />
+    <JFXTextField promptText="Ort"  fx:id="cityTextField" layoutX="100.0" layoutY="200.0" prefHeight="25.0" prefWidth="150.0" />
+    <Label layoutX="280.0" layoutY="0.0" text="Geburtsdatum" />
+    <DatePicker fx:id="birthdayDatePicker" layoutX="280.0" layoutY="20.0" prefHeight="25.0" prefWidth="250.0" />
+    <JFXTextField promptText="Telefon"  fx:id="phoneTextField" layoutX="280.0" layoutY="80.0" prefHeight="25.0" prefWidth="250.0" />
+    <JFXTextField promptText="Mobil"   fx:id="mobileTextField" layoutX="280.0" layoutY="140.0" prefHeight="25.0" prefWidth="250.0" />
+</fx:root>

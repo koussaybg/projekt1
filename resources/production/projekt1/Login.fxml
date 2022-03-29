@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.LoginViewController">
+   <children>
+      <JFXTextField promptText="Benutzername" labelFloat="true" fx:id="userNameTextField" layoutX="25.0" layoutY="45.0" prefHeight="25.0" prefWidth="250.0" />
+      <JFXPasswordField promptText="Password" labelFloat="true" fx:id="passwordTextField" layoutX="25.0" layoutY="100.0" prefHeight="25.0" prefWidth="250.0" />
+      <JFXButton buttonType="RAISED" defaultButton="true"   style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="120.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Login" onAction="#onLoginButtonClicked"/>
+      <Label fx:id="errorLabel" layoutX="25.0" layoutY="130.0" text="Login fehlgeschlagen" styleClass="error-label" visible="false"/>
+   </children>
+</AnchorPane>

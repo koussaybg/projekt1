@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<SplitPane dividerPositions="0.66" prefHeight="160.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.TreatmentSettingsViewController">
+    <items>
+        <AnchorPane minHeight="0.0"  prefHeight="160.0" prefWidth="296.0" maxWidth="620.0" minWidth="620.0">
+            <children>
+                <JFXTextField fx:id="searchTreatmentTextField" layoutX="20.0" layoutY="25.0" prefHeight="25.0" prefWidth="240.0" />
+                <CheckBox fx:id="showDeactivatedCheckBox" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" text="Deaktivierte Angebote anzeigen"/>
+                <TableView fx:id="treatmentTypeTable" layoutX="20.0" layoutY="60.0" prefHeight="600.0" prefWidth="595.0">
+                    <columns>
+                    <TableColumn fx:id="nameColumn" prefWidth="343.0" text="Name" />
+                    <TableColumn fx:id="typeColumn" prefWidth="200.0" text="Gruppentherapie" />
+                    <TableColumn fx:id="activeStateColumn" prefWidth="50.0" text="Aktiv" />
+                    </columns>
+                </TableView>
+                <JFXButton fx:id="addNewTreatmentButton" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="20.0" layoutY="670.0" prefHeight="25.0" prefWidth="250.0" text="Neue Behandlung eintragen" onAction="#onAddNewTreatmentButtonClicked"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <Label layoutX="20.0" layoutY="40.0" text="Verfügbare Varianten" />
+                <JFXComboBox fx:id="durationComboBox" layoutX="20.0" layoutY="60.0" prefHeight="25.0" prefWidth="150.0" />
+                <Label layoutX="20.0" layoutY="290.0" text="Name" />
+                <JFXTextField fx:id="treatmentNameTextField" layoutX="20.0" layoutY="310.0" prefHeight="25.0" prefWidth="250.0" />
+                <Label layoutX="20.0" layoutY="350.0" text="Dauer" />
+                <TextField fx:id="durationTextField" layoutX="20.0" layoutY="370.0" prefHeight="25.0" prefWidth="100.0" />
+                <Label layoutX="170.0" layoutY="350.0" text="Preis" />
+                <JFXTextField fx:id="priceTextField" layoutX="170.0" layoutY="370.0" prefHeight="25.0" prefWidth="100.0" />
+                <JFXCheckBox fx:id="groupTherapyCheckBox" layoutX="20.0" layoutY="415.0" mnemonicParsing="false" text="Gruppentherapie"/>
+                <JFXButton style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" layoutX="20.0" layoutY="670.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Hinzufügen" onAction="#onNewTreatmentTypeButtonClicked"/>
+                <JFXButton buttonType="FLAT" style="-fx-text-fill:#d40b0b;-fx-font-size:14px;"  layoutX="140.0" layoutY="670.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="(De)aktivieren" onAction="#onDeActivateTreatmentTypeButtonClicked"/>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
